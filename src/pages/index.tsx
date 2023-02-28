@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import {Box} from "@chakra-ui/react";
-import Navbar from "@/components/navbar";
 import Bio from "@/components/bio";
 import Projects from "@/components/projects";
 import Socials from "@/components/socials";
+import Navbar from "@/components/navbar/navbar";
 
 export default function Home() {
     return (
@@ -14,11 +14,11 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <Box as={'main'} display={'flex'}
-                 backgroundColor={'#202023'} justifyContent={'center'} flexDirection={'column'}
-                 alignItems={'center'}>
-                <Box width={'30%'}
-                     color={'white'}
+            <Box as={'main'} backgroundColor={'#202023'}>
+                <Box
+                    color={'white'}
+                    overflow={'hidden'}
+                    margin={'0 auto'}
                 >
 
                     <Navbar/>

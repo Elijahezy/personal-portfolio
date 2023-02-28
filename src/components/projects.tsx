@@ -5,7 +5,6 @@ import Link from "next/link";
 export default function Projects() {
     return (
         <Box>
-
             <Title>Projects</Title>
             <Grid color={'white'} templateColumns='repeat(2, 1fr)' gap={'10px'} m={'20px 0 0 0'}
                   textAlign={'center'}>
@@ -30,8 +29,6 @@ export default function Projects() {
                     <Heading as={'h5'} fontSize={'s'} m={'10px 0 10px 0'}>Guitar Shop</Heading>
                     <Text fontSize={'xs'} width={'80%'}>An online shop that sells awesome guitars</Text>
                 </GridItem>
-
-
             </Grid>
         </Box>
     )

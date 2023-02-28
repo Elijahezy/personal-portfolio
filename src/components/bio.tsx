@@ -4,9 +4,9 @@ import Title from "@/components/ui/ui";
 export default function Bio() {
     return (
         <Box color={'white'}>
-            <Box color={'white'} display={"flex"} flexDirection={"row"} justifyContent={"space-between"}>
+            <Box display={"flex"} flexDirection={"row"} justifyContent={"space-between"}>
                 <Container p={0}>
-                    <Heading as={'h2'} size={'xl'}>
+                    <Heading as={'h2'} size={'lg'}>
                         Ilia Karavaev
                     </Heading>
                     <Text>
