@@ -10,3 +10,5 @@ export const LINKEDIN_URL = 'https://www.linkedin.com/in/ilia-karavaev-511706137
 export const GITHUB_URL = 'https://github.com/Elijahezy'
 
 export const INSTAGRAM_URL = 'https://www.instagram.com/elijah_uf/'
+
+export const GITHUB_SOURCE_URL = 'https://github.com/Elijahezy/personal-portfolio'
