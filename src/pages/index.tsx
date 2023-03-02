@@ -4,6 +4,14 @@ import Bio from "@/components/bio";
 import Projects from "@/components/projects";
 import Socials from "@/components/socials";
 import Navbar from "@/components/navbar/navbar";
+import styled from "styled-components";
+import {useBearStore} from "@/store/store";
+
+const Main = styled.main`
+  background-color: ${({theme}) => theme.color.backgroundColor};
+  transition: background-color 200ms ease-in-out;
+
+`
 
 export default function Home() {
     return (
@@ -21,7 +29,7 @@ export default function Home() {
 
 
             </Head>
-            <Box as={'main'} backgroundColor={'#202023'}>
+            <Main>
                 <Box
                     color={'white'}
                     overflow={'hidden'}
@@ -33,7 +41,7 @@ export default function Home() {
                     <Projects/>
                     <Socials/>
                 </Box>
-            </Box>
+            </Main>
         </>
     )
 }

@@ -1,13 +1,16 @@
 import {createGlobalStyle} from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
-  * {
+  *,
+  *::before,
+  *::after {
     margin: 0;
     padding: 0;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    box-sizing: border-box;
   }
 
   body {
-    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Segoe UI";
   }
 `;
