@@ -1,28 +1,38 @@
 import * as S from './navbar.styled'
 import Link from "next/link";
 import {Icon} from "@chakra-ui/icon";
-import {EARTH_AMERICA_PATH, GITHUB_PATH, GITHUB_SOURCE_URL, GITHUB_URL, MOON_PATH, SUN_PATH} from "@/components/consts";
+import {
+    EARTH_AMERICA_PATH,
+    GITHUB_PATH,
+    GITHUB_SOURCE_URL,
+    GITHUB_URL,
+    HAMBURGER_BARS_PATH,
+    MOON_PATH,
+    SUN_PATH
+} from "@/components/consts";
 import styled from 'styled-components'
 import {useBearStore} from "@/store/store";
+import {useState} from "react";
 
 
 export default function Navbar() {
     const currentThemeBoolean = useBearStore((state) => state.themeBoolean)
+    const [isHamburgerMenuDisplayed, setHamburgerMenuDisplayed] = useState(false)
     return (
         <S.Navbar>
-            <S.NavList>
-                <S.NavItem margin={'0 20px 0 0'}>
-                    <S.Logo href={'/'}>
-                        <Icon viewBox="0 0 512 512" color={currentThemeBoolean ? 'white' : 'black'}>
-                            <path
-                                fill='currentColor'
-                                d={EARTH_AMERICA_PATH}/>
-                        </Icon>
-                        <span>
+            <S.Logo href={'/'}>
+                <Icon viewBox="0 0 512 512" color={currentThemeBoolean ? 'white' : 'black'}>
+                    <path
+                        fill='currentColor'
+                        d={EARTH_AMERICA_PATH}/>
+                </Icon>
+                <span>
                     Ilia Karavaev
                         </span>
-                    </S.Logo>
-                </S.NavItem>
+            </S.Logo>
+            <S.NavList>
+
+
                 <S.NavItem>
                     <S.NavLink href={'/projects'}>
                         Projects
@@ -38,15 +48,29 @@ export default function Navbar() {
                         Source
                     </S.NavLink>
                 </S.NavItem>
-                <S.ThemeSwitcher bg={currentThemeBoolean ? '#FBD38D' : 'purple'}
-                                 onClick={() => useBearStore.getState().switchTheme(!currentThemeBoolean)}>
-                    <Icon viewBox={currentThemeBoolean ? "0 0 512 512" : "0 0 384 512"}
-                          color={currentThemeBoolean ? 'black' : 'white'}>
-                        <path d={currentThemeBoolean ? SUN_PATH : MOON_PATH} fill='currentColor'/>
-                    </Icon>
-                </S.ThemeSwitcher>
-            </S.NavList>
 
+            </S.NavList>
+            <S.ThemeSwitcher bg={currentThemeBoolean ? '#FBD38D' : 'purple'}
+                             onClick={() => useBearStore.getState().switchTheme(!currentThemeBoolean)}>
+                <Icon viewBox={currentThemeBoolean ? "0 0 512 512" : "0 0 384 512"}
+                      color={currentThemeBoolean ? 'black' : 'white'}>
+                    <path d={currentThemeBoolean ? SUN_PATH : MOON_PATH} fill='currentColor'/>
+                </Icon>
+            </S.ThemeSwitcher>
+
+            <S.HamburgerMenu onClick={() => setHamburgerMenuDisplayed(!isHamburgerMenuDisplayed)}>
+                <Icon viewBox="0 0 448 512" color={currentThemeBoolean ? 'white' : 'black'}>
+                    <path d={HAMBURGER_BARS_PATH} fill={'currentColor'}/>
+                </Icon>
+            </S.HamburgerMenu>
+            <S.HamburgerMenuWrapper display={isHamburgerMenuDisplayed}>
+                <S.HamburgerMenuItem href={'/projects'}>
+                    Projects
+                </S.HamburgerMenuItem>
+                <S.HamburgerMenuItem href={GITHUB_SOURCE_URL}>
+                    Source
+                </S.HamburgerMenuItem>
+            </S.HamburgerMenuWrapper>
         </S.Navbar>
     )
 }

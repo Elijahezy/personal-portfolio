@@ -11,11 +11,18 @@ export const Navbar = styled.nav`
   position: fixed;
   backdrop-filter: blur(10px);
   background-color: ${({theme}) => theme.color.navBackground};
+  display: flex;
+  padding: 10px 25%;
+  position: relative;
 
 
   a {
     text-decoration: none;
 
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 10px 5%;
   }
 `;
 
@@ -23,12 +30,15 @@ export const NavList = styled.ul`
   display: flex;
   flex-direction: row;
   text-decoration: none;
-  padding: 10px 0;
   gap: 15px;
   list-style: none;
   align-items: center;
-  margin: 0 auto;
-  width: 50%;
+  margin: 0 20px;
+
+  @media screen and (max-width: 481px) {
+    display: none;
+  }
+
 `;
 
 export const NavItem = styled.li<NavItemProps>`
@@ -81,8 +91,8 @@ export const ThemeSwitcher = styled.button<ThemeSwitcherProps>`
   border-radius: 5px;
   background-color: ${props => props.bg};
   cursor: pointer;
-  margin: 0 0 0 auto;
   border: 0;
+  margin: 0 0 0 auto;
 
   &:hover {
     filter: brightness(0.9);
@@ -91,4 +101,54 @@ export const ThemeSwitcher = styled.button<ThemeSwitcherProps>`
   &:focus {
     outline: none;
   }
+`;
+
+export const HamburgerMenu = styled.button`
+  margin: 0 0 0 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0;
+  display: none;
+  background-color: transparent;
+  border: 1px solid ${({theme}) => theme.color.text};
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @media screen and (max-width: 481px) {
+    display: block;
+  }
+`;
+
+interface HamburgerMenuWrapperProps {
+    display: boolean,
+}
+
+export const HamburgerMenuWrapper = styled.div<HamburgerMenuWrapperProps>`
+  flex-direction: column;
+  position: absolute;
+  right: 5%;
+  top: 100%;
+  display: none;
+  background-color: ${({theme}) => theme.color.hamburgerBackground};
+  border-radius: 8px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+
+  @media screen and (max-width: 481px) {
+    display: ${props => props.display ? 'flex' : 'none'};
+  }
+`;
+
+export const HamburgerMenuItem = styled(Link)`
+  padding: 10px 50px 10px 10px;
+  color: ${({theme}) => theme.color.text};
+
 `;
