@@ -1,35 +1,33 @@
 import {Box, Grid, GridItem, Heading, Image, Text} from "@chakra-ui/react";
-import Title from "@/components/ui/ui";
 import Link from "next/link";
+import * as S from './projects/projects.styled'
+import * as H from '../styles/ui.styled'
 
 export default function Projects() {
     return (
-        <Box>
-            <Title>Projects</Title>
-            <Grid color={'white'} templateColumns='repeat(2, 1fr)' gap={'10px'} m={'20px 0 0 0'}
-                  textAlign={'center'}>
-                <GridItem display={'flex'} flexDirection={'column'} alignItems={'center'}>
-                    <Link href={'https://online-cinema-app-elijahezy.vercel.app/'}>
+        <H.Container>
+            <H.TitleH3>Projects</H.TitleH3>
+            <S.GridContainer>
+                <S.GridItem href={'/asd'}>
 
-                        <Image src='/projects/wtw.png' alt='A website to watch films'
-                               objectFit={'contain'} borderRadius={'10px'}/>
-                        <Heading as={'h5'} fontSize={'s'} m={'10px 0 10px 0'}>What To Watch</Heading>
-                        <Text fontSize={'xs'} width={'80%'}>WTW is a streaming service that offers a wide variety
-                            of
-                            award-winning
-                            TV shows,
-                            movies</Text>
-                    </Link>
+                    <S.Picture src='/projects/wtw.png' alt='A website to watch films'
+                    />
+                    <Heading as={'h5'} fontSize={'s'} m={'10px 0 10px 0'}>What To Watch</Heading>
+                    <H.Text>WTW is a streaming service that offers a wide variety
+                        of
+                        award-winning
+                        TV shows,
+                        movies</H.Text>
 
-                </GridItem>
+                </S.GridItem>
 
-                <GridItem display={'flex'} flexDirection={'column'} alignItems={'center'}>
-                    <Image src='/projects/guitar-shop.png' alt='A website to buy a guitar'
-                           objectFit={'contain'}/>
-                    <Heading as={'h5'} fontSize={'s'} m={'10px 0 10px 0'}>Guitar Shop</Heading>
-                    <Text fontSize={'xs'} width={'80%'}>An online shop that sells awesome guitars</Text>
-                </GridItem>
-            </Grid>
-        </Box>
+                <S.GridItem href={'/qwe'}>
+                    <S.Picture src='/projects/guitar-shop.png' alt='A website to buy a guitar'
+                    />
+                    <H.TitleH5 m={'10px 0 10px 0'}>Guitar Shop</H.TitleH5>
+                    <H.Text>An online shop that sells awesome guitars</H.Text>
+                </S.GridItem>
+            </S.GridContainer>
+        </H.Container>
     )
 }

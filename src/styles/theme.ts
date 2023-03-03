@@ -1,6 +1,6 @@
 export const darkTheme = {
     color: {
-        primary: '#ff6b81',
+        primary: 'rgb(255, 107, 129)',
         text: '#FFF',
         backgroundColor: '#202023',
         navBackground: '#20202380',
@@ -10,7 +10,7 @@ export const darkTheme = {
 
 export const lightTheme = {
     color: {
-        primary: '#ff6b81',
+        primary: 'rgb(255, 107, 129)',
         text: '#1A202C',
         backgroundColor: 'rgb(240, 231, 219)',
         navBackground: 'rgba(255, 255, 255, 0.25)',

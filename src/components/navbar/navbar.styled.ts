@@ -8,12 +8,11 @@ interface NavItemProps {
 export const Navbar = styled.nav`
   width: 100%;
   color: ${({theme}) => theme.color.text};
-  position: fixed;
+  position: relative;
   backdrop-filter: blur(10px);
   background-color: ${({theme}) => theme.color.navBackground};
   display: flex;
-  padding: 10px 25%;
-  position: relative;
+  padding: 10px 26%;
 
 
   a {
@@ -73,7 +72,7 @@ export const Logo = styled(Link)`
     font-size: 20px;
   }
 
-  &: hover {
+  &:hover {
     svg {
       rotate: 0deg;
 

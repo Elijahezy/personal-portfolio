@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import {Box} from "@chakra-ui/react";
-import Bio from "@/components/bio";
+import Bio from "@/components/bio/bio";
 import Projects from "@/components/projects";
 import Socials from "@/components/socials";
 import Navbar from "@/components/navbar/navbar";
@@ -30,17 +30,10 @@ export default function Home() {
 
             </Head>
             <Main>
-                <Box
-                    color={'white'}
-                    overflow={'hidden'}
-                    margin={'0 auto'}
-                >
-
-                    <Navbar/>
-                    <Bio/>
-                    <Projects/>
-                    <Socials/>
-                </Box>
+                <Navbar/>
+                <Bio/>
+                <Projects/>
+                <Socials/>
             </Main>
         </>
     )
