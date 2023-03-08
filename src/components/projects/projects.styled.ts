@@ -5,9 +5,6 @@ export const GridContainer = styled.div`
   display: flex;
   width: 100%;
   gap: 10px;
-  margin: 20px 0 0 0;
-
-
 `;
 
 export const GridItem = styled(Link)`
