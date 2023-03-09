@@ -11,6 +11,8 @@ export const SUN_PATH = "M375.7 19.7c-1.5-8-6.9-14.7-14.4-17.8s-16.1-2.2-22.8 2.
 export const MOON_PATH = "M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
 
 export const HAMBURGER_BARS_PATH = "M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z";
+
+export const ARROW_UP_RIGHT = "M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/ilia-karavaev-511706137/';
 
 export const GITHUB_URL = 'https://github.com/Elijahezy'
@@ -18,3 +20,7 @@ export const GITHUB_URL = 'https://github.com/Elijahezy'
 export const INSTAGRAM_URL = 'https://www.instagram.com/elijah_uf/'
 
 export const GITHUB_SOURCE_URL = 'https://github.com/Elijahezy/personal-portfolio'
+
+export const WTW_SOURCE_URL = 'https://github.com/Elijahezy/Online-Cinema-App'
+
+export const WTW_DEMO_URL = 'https://online-cinema-app-elijahezy.vercel.app/'

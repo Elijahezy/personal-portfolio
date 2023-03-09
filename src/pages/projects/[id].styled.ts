@@ -7,12 +7,12 @@ export const BreadCrumbsContainer = styled.div`
 `;
 
 export const ProjectsPageLink = styled(Link)`
-  color: ${({theme}) => theme.color.primary};
+  color: ${({theme}) => theme.color.activeLink};
   text-decoration: none;
   font-weight: 500;
 
   &:hover {
-    text-decoration: underline 1.5px solid ${({theme}) => theme.color.primary};
+    text-decoration: underline 1.5px solid ${({theme}) => theme.color.activeLink};
     text-underline-offset: 6px;
   }
 `;
@@ -31,8 +31,16 @@ export const Description = styled.p`
 `;
 
 export const Tag = styled.span`
-  background-color: ${({theme}) => theme.color.primary};
+  background-color: ${({theme}) => theme.color.primaryLight};
+  color: ${({theme}) => theme.color.pink};
   padding: 2px 3px;
-  font-weight: 900;
+  font-weight: 700;
+  font-size: 14px;
+`;
+export const Picture = styled.img`
+  width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  margin: 30px 0 0 0;
 `;
 

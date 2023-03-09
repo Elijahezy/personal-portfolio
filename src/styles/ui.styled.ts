@@ -9,6 +9,7 @@ interface UniversalProps {
     alignContent?: string,
     alignItems?: string,
     justifyItems?: string,
+    overflow?: string,
 }
 
 export const TitleH3 = styled.h3<UniversalProps>`
@@ -31,13 +32,11 @@ export const Text = styled.p<UniversalProps>`
 export const Container = styled.article<UniversalProps>`
   display: flex;
   flex-direction: column;
-  padding: 0 33%;
-  margin: 0 auto;
   color: ${({theme}) => theme.color.text};
-  margin: ${props => props.m};
+  margin: ${props => props.m || '0 33%'};
   padding: ${props => props.p};
-
-  @media screen and (max-width: 1024px) {
+  overflow: ${props => props.overflow};
+  @media screen and(max-width: 1024px) {
     padding: 0 20%;
   }
 `;
@@ -51,4 +50,8 @@ export const FlexContainer = styled.div<UniversalProps>`
   align-items: ${props => props.alignItems};
   align-content: ${props => props.alignContent};
   gap: ${props => props.gap};
+
+  margin: ${props => props.m};
+  padding: ${props => props.p};
 `;
+
