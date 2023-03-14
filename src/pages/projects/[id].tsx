@@ -1,8 +1,8 @@
 import Page from "@/components/page/page";
-import * as S from './[id].styled';
+import * as S from '../../components/project-page/project-page.styled';
 import * as H from '../../styles/ui.styled'
 import {useRouter} from "next/router";
-import {ARROW_UP_RIGHT, WTW_DEMO_URL, WTW_SOURCE_URL} from "@/components/consts";
+import {ARROW_UP_RIGHT} from "@/components/consts";
 import {Icon} from "@chakra-ui/icon";
 import {useBearStore} from "@/store/store";
 

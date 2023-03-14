@@ -12,14 +12,14 @@ type Data = {
 }
 
 interface BearState {
-    themeBoolean: boolean,
+    themeBoolean: string,
     // eslint-disable-next-line no-unused-vars
-    switchTheme: (bool: boolean) => void,
+    switchTheme: (bool: string) => void,
     projects: Data[],
 }
 
 export const useBearStore = create<BearState>((set) => ({
-    themeBoolean: true,
+    themeBoolean: 'true',
     switchTheme: (bool) => set({themeBoolean: bool}),
     projects: [
         {

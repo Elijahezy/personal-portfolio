@@ -26,9 +26,6 @@ export const ProjectName = styled.span`
   font-weight: 600;
 `;
 
-export const Description = styled.p`
-`;
-
 export const Tag = styled.span`
   background-color: ${({theme}) => theme.color.primaryLight};
   color: ${({theme}) => theme.color.pink};
