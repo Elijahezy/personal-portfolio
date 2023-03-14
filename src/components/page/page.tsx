@@ -6,7 +6,7 @@ interface PageProps {
     children: string | JSX.Element | JSX.Element[],
 }
 
-export default function ({children}: PageProps) {
+export default function Page({children}: PageProps) {
     return (
         <>
             <Head>
@@ -16,9 +16,6 @@ export default function ({children}: PageProps) {
                 <link rel="icon" href="/favicon.ico"/>
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com"/>
-                <link
-                    href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&display=swap"
-                    rel="stylesheet"/>
 
 
             </Head>

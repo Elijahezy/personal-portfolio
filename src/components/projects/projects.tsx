@@ -17,7 +17,7 @@ export default function Projects() {
                         TV shows,
                         movies</H.Text>
                 </S.GridItem>
-                <S.GridItem href={'/qwe'}>
+                <S.GridItem href={'/projects/guitar_shop'}>
                     <S.Picture src='/projects/guitar-shop.png' alt='A website to buy a guitar'
                     />
                     <H.TitleH5 m={'10px 0 10px 0'}>Guitar Shop</H.TitleH5>

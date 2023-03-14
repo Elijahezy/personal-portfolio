@@ -1,4 +1,4 @@
-import {Icon, createIcon} from '@chakra-ui/react'
+import {Icon} from '@chakra-ui/react'
 import {GITHUB_PATH, GITHUB_URL, INSTAGRAM_PATH, INSTAGRAM_URL, LINKED_PATH, LINKEDIN_URL} from "@/components/consts";
 import * as H from '../../styles/ui.styled';
 import * as S from './socials.styled'

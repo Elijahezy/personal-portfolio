@@ -27,7 +27,6 @@ export const ProjectName = styled.span`
 `;
 
 export const Description = styled.p`
-
 `;
 
 export const Tag = styled.span`

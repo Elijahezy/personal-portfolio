@@ -1,16 +1,13 @@
 import * as S from './navbar.styled'
-import Link from "next/link";
 import {Icon} from "@chakra-ui/icon";
 import {
     EARTH_AMERICA_PATH,
     GITHUB_PATH,
     GITHUB_SOURCE_URL,
-    GITHUB_URL,
     HAMBURGER_BARS_PATH,
     MOON_PATH,
     SUN_PATH
 } from "@/components/consts";
-import styled from 'styled-components'
 import {useBearStore} from "@/store/store";
 import {useState} from "react";
 

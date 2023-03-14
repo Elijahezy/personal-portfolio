@@ -10,6 +10,7 @@ interface UniversalProps {
     alignItems?: string,
     justifyItems?: string,
     overflow?: string,
+    fontWeight?: string,
 }
 
 export const TitleH3 = styled.h3<UniversalProps>`
@@ -27,6 +28,7 @@ export const TitleH5 = styled.h5<UniversalProps>`
 export const Text = styled.p<UniversalProps>`
   margin: ${props => props.m};
   padding: ${props => props.p};
+  font-weight: ${props => props.fontWeight};
 `;
 
 export const Container = styled.article<UniversalProps>`
