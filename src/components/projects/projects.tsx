@@ -5,7 +5,7 @@ export default function Projects() {
     return (
         <H.Container>
             <H.TitleH3 m={'0 0 20px 0'}>Projects</H.TitleH3>
-            <S.GridContainer>
+            <H.Container>
                 <S.GridItem href={'/projects/wtw'}>
 
                     <S.Picture src='/projects/wtw.png' alt='A website to watch films'
@@ -23,7 +23,7 @@ export default function Projects() {
                     <H.TitleH5 m={'10px 0 10px 0'}>Guitar Shop</H.TitleH5>
                     <H.Text>An online shop that sells awesome guitars</H.Text>
                 </S.GridItem>
-            </S.GridContainer>
+            </H.Container>
         </H.Container>
     )
 }

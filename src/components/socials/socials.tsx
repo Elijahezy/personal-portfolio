@@ -8,7 +8,7 @@ export default function Socials() {
     const currentThemeBoolean = useBearStore((state) => state.themeBoolean);
     return (
         <H.Container>
-            <H.TitleH3 m={'0 0 20px 0'}>On the web</H.TitleH3>
+            <H.TitleH3 m={'40px 0 20px 0'}>On the web</H.TitleH3>
             <S.SocialLink href={LINKEDIN_URL}>
                 <Icon viewBox="0 0 448 512" color={currentThemeBoolean ? 'white' : 'black'}>
                     <path

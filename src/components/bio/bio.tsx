@@ -18,10 +18,11 @@ export default function Bio() {
             </S.InfoWrapper>
             <H.TitleH3>About me</H.TitleH3>
             <S.Text>
-                I used to be a private tutor of English language. However, one day I felt like I want to do something
-                more complicated. I decided to try coding courses and I felt in love with coding. I finished those
-                courses and found an internship at digital agency.
-                So now I{`'`}m looking for full time job in the USA at any state.
+                I am a coding enthusiast who loves to work with React, TypeScript, Styled Components, and Redux. I find
+                it very satisfying to solve coding problems on platforms like Codewars and enjoy the challenge they
+                provide. When I{`'`}m not coding, I love to engage in outdoor sports like hiking, boulder climbing, and
+                calisthenics to stay active and maintain my health. Lastly, I have a strong desire to explore and travel
+                around the USA to experience new adventures and broaden my horizons.
             </S.Text>
         </H.Container>
     )

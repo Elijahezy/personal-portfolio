@@ -33,7 +33,7 @@ export const Text = styled.p<UniversalProps>`
 
 export const Container = styled.article<UniversalProps>`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${props => props.flexDirection || 'column'};
   color: ${({theme}) => theme.color.text};
   margin: ${props => props.m || '0 33%'};
   padding: ${props => props.p};
