@@ -9,7 +9,6 @@ export default function Home() {
         <>
 
             <Page>
-                <Memoized3dObject/>
                 <Bio/>
                 <Projects/>
                 <Socials/>

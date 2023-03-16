@@ -31,6 +31,7 @@ export const Tag = styled.span`
   color: ${({theme}) => theme.color.pink};
   padding: 2px 3px;
   font-weight: 700;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 14px;
 `;
 export const Picture = styled.img`

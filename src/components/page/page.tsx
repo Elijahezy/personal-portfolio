@@ -1,6 +1,7 @@
 import * as S from './page.styled';
 import Navbar from "@/components/navbar/navbar";
 import Head from "next/head";
+import {Memoized3dObject} from "@/components/model/model";
 
 interface PageProps {
     children: string | JSX.Element | JSX.Element[],
@@ -21,6 +22,7 @@ export default function Page({children}: PageProps) {
             </Head>
             <S.Main>
                 <Navbar/>
+                <Memoized3dObject/>
                 {children}
             </S.Main>
 

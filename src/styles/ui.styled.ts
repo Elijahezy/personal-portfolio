@@ -18,6 +18,7 @@ export const TitleH3 = styled.h3<UniversalProps>`
   text-underline-offset: 6px;
   margin: ${props => props.m};
   padding: ${props => props.p};
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 `;
 
 export const TitleH5 = styled.h5<UniversalProps>`

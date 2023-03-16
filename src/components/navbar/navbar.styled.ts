@@ -14,8 +14,8 @@ export const Navbar = styled.nav`
   display: flex;
   padding: 10px 26%;
   z-index: 10;
-
-
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  
   a {
     text-decoration: none;
 
