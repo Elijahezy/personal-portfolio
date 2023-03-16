@@ -8,11 +8,12 @@ interface NavItemProps {
 export const Navbar = styled.nav`
   width: 100%;
   color: ${({theme}) => theme.color.text};
-  position: relative;
+  position: fixed;
   backdrop-filter: blur(10px);
   background-color: ${({theme}) => theme.color.navBackground};
   display: flex;
   padding: 10px 26%;
+  z-index: 10;
 
 
   a {
@@ -108,7 +109,6 @@ export const HamburgerMenu = styled.button`
   height: 40px;
   border-radius: 5px;
   cursor: pointer;
-  border: 0;
   display: none;
   background-color: transparent;
   border: 1px solid ${({theme}) => theme.color.text};
@@ -139,6 +139,7 @@ export const HamburgerMenuWrapper = styled.div<HamburgerMenuWrapperProps>`
   background-color: ${({theme}) => theme.color.hamburgerBackground};
   border-radius: 8px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  z-index: 10;
 
 
   @media screen and (max-width: 481px) {
@@ -149,5 +150,5 @@ export const HamburgerMenuWrapper = styled.div<HamburgerMenuWrapperProps>`
 export const HamburgerMenuItem = styled(Link)`
   padding: 10px 50px 10px 10px;
   color: ${({theme}) => theme.color.text};
-
+  z-index: 10;
 `;

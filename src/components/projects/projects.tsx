@@ -1,9 +1,13 @@
 import * as S from './projects.styled'
 import * as H from '../../styles/ui.styled'
 
-export default function Projects() {
+interface ProjectsProps {
+    p?: string,
+}
+
+export default function Projects({p}: ProjectsProps) {
     return (
-        <H.Container>
+        <H.Container p={p}>
             <H.TitleH3 m={'0 0 20px 0'}>Projects</H.TitleH3>
             <S.GridContainer>
                 <S.GridItem href={'/projects/wtw'}>
