@@ -38,8 +38,12 @@ export const Container = styled.article<UniversalProps>`
   margin: ${props => props.m || '0 33%'};
   padding: ${props => props.p};
   overflow: ${props => props.overflow};
-  @media screen and(max-width: 1024px) {
-    padding: 0 20%;
+  @media screen and (max-width: 1024px) {
+    margin: 0 20%;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin: 0 5%;
   }
 `;
 

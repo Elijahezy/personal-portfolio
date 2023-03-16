@@ -1,5 +1,14 @@
 import {Icon} from '@chakra-ui/react'
-import {GITHUB_PATH, GITHUB_URL, INSTAGRAM_PATH, INSTAGRAM_URL, LINKED_PATH, LINKEDIN_URL} from "@/components/consts";
+import {
+    CODEWARS_PATH,
+    CODEWARS_URL,
+    GITHUB_PATH,
+    GITHUB_URL,
+    INSTAGRAM_PATH,
+    INSTAGRAM_URL,
+    LINKED_PATH,
+    LINKEDIN_URL
+} from "@/components/consts";
 import * as H from '../../styles/ui.styled';
 import * as S from './socials.styled'
 import {useBearStore} from "@/store/store";
@@ -32,6 +41,14 @@ export default function Socials() {
                         d={INSTAGRAM_PATH}/>
                 </Icon>
                 Instagram
+            </S.SocialLink>
+            <S.SocialLink href={CODEWARS_URL}>
+                <Icon viewBox="0 0 640 512" color={currentThemeBoolean ? 'white' : 'black'}>
+                    <path
+                        fill='currentColor'
+                        d={CODEWARS_PATH}/>
+                </Icon>
+                Codewars
             </S.SocialLink>
         </H.Container>
     )
