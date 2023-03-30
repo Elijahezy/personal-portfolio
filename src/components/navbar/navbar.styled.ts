@@ -15,7 +15,7 @@ export const Navbar = styled.nav`
   padding: 10px 26%;
   z-index: 10;
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  
+
   a {
     text-decoration: none;
 
@@ -127,7 +127,7 @@ export const HamburgerMenu = styled.button`
 `;
 
 interface HamburgerMenuWrapperProps {
-    display: boolean,
+    display: string,
 }
 
 export const HamburgerMenuWrapper = styled.div<HamburgerMenuWrapperProps>`
@@ -143,7 +143,7 @@ export const HamburgerMenuWrapper = styled.div<HamburgerMenuWrapperProps>`
 
 
   @media screen and (max-width: 481px) {
-    display: ${props => props.display ? 'flex' : 'none'};
+    display: ${props => props.display === 'true' ? 'flex' : 'none'};
   }
 `;
 

@@ -7,7 +7,6 @@ import {Memoized3dObject} from "@/components/model/model";
 export default function Home() {
     return (
         <>
-
             <Page>
                 <Bio/>
                 <Projects/>

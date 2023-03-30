@@ -28,8 +28,6 @@ export default function Navbar() {
                         </span>
             </S.Logo>
             <S.NavList>
-
-
                 <S.NavItem>
                     <S.NavLink href={'/projects'}>
                         Projects
@@ -50,8 +48,9 @@ export default function Navbar() {
             <S.ThemeSwitcher bg={currentThemeBoolean ? '#FBD38D' : 'purple'}
                              onClick={() => useBearStore.getState().switchTheme(!currentThemeBoolean)}>
                 <Icon viewBox={currentThemeBoolean ? "0 0 512 512" : "0 0 384 512"}
-                      color={currentThemeBoolean ? 'black' : 'white'}>
-                    <path d={currentThemeBoolean ? SUN_PATH : MOON_PATH} fill='currentColor'/>
+                      color={currentThemeBoolean ? 'white' : 'white'}>
+                    <path d={currentThemeBoolean ? MOON_PATH : SUN_PATH} fill='currentColor'/>
+
                 </Icon>
             </S.ThemeSwitcher>
 
@@ -60,7 +59,7 @@ export default function Navbar() {
                     <path d={HAMBURGER_BARS_PATH} fill={'currentColor'}/>
                 </Icon>
             </S.HamburgerMenu>
-            <S.HamburgerMenuWrapper display={isHamburgerMenuDisplayed}>
+            <S.HamburgerMenuWrapper display={isHamburgerMenuDisplayed.toString()}>
                 <S.HamburgerMenuItem href={'/projects'}>
                     Projects
                 </S.HamburgerMenuItem>

@@ -13,7 +13,6 @@ type Data = {
 
 interface BearState {
     themeBoolean: boolean,
-    // eslint-disable-next-line no-unused-vars
     switchTheme: (bool: boolean) => void,
     projects: Data[],
 }
