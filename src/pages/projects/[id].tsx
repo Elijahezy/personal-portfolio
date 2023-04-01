@@ -13,7 +13,7 @@ export default function SingleProjectPage() {
 
     return (
         <Page>
-            <H.Container overflow={'hidden'} p={'0 0 40px 0'}>
+            <H.Container overflow={'hidden'} p={'400px 0 40px 0'}>
                 <S.BreadCrumbsContainer>
                     <S.ProjectsPageLink href={'/projects'}>Projects</S.ProjectsPageLink>
                     <S.Separator>{`>`}</S.Separator>

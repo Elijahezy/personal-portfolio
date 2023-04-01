@@ -6,6 +6,7 @@ import {useBearStore} from "@/store/store";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import CircleSpinner from "@/components/spinner/spinner";
+import {AnimatePresence} from "framer-motion";
 
 
 const LazyModelLoad = dynamic(() => import('../../src/components/model/model'), {
