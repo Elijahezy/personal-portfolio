@@ -1,10 +1,10 @@
-import Page from "@/components/page/page";
+import Article from "@/components/layout/article/article";
 import Projects from "@/components/projects/projects";
 
 export default function ProjectsPage() {
     return (
-        <Page>
+        <Article title={'Projects'}>
             <Projects m={'400px 0 0 0'}/>
-        </Page>
+        </Article>
     )
 }

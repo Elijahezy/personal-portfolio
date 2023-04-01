@@ -1,4 +1,4 @@
-import Page from "@/components/page/page";
+import Article from "@/components/layout/article/article";
 import * as S from '../../components/project-page/project-page.styled';
 import * as H from '../../styles/ui.styled'
 import {useRouter} from "next/router";
@@ -12,8 +12,8 @@ export default function SingleProjectPage() {
     const currentProject = useBearStore((state) => state.projects).find((item) => item.id === id)
 
     return (
-        <Page>
-            <H.Container overflow={'hidden'} p={'400px 0 40px 0'}>
+        <Article title={currentProject?.name}>
+            <H.Container overflow={'hidden'} p={'400px 0 0 0'}>
                 <S.BreadCrumbsContainer>
                     <S.ProjectsPageLink href={'/projects'}>Projects</S.ProjectsPageLink>
                     <S.Separator>{`>`}</S.Separator>
@@ -58,6 +58,6 @@ export default function SingleProjectPage() {
                 </H.FlexContainer>
                 <S.Picture src={currentProject?.img} alt={'wtw films website'}/>
             </H.Container>
-        </Page>
+        </Article>
     )
 }

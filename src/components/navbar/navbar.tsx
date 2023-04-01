@@ -78,10 +78,10 @@ export default function Navbar() {
                 </Icon>
             </S.HamburgerMenu>
             <S.HamburgerMenuWrapper display={isHamburgerMenuDisplayed.toString()}>
-                <S.HamburgerMenuItem href={'/projects'}>
+                <S.HamburgerMenuItem href={'/projects'} onClick={() => setHamburgerMenuDisplayed(false)}>
                     Projects
                 </S.HamburgerMenuItem>
-                <S.HamburgerMenuItem href={GITHUB_SOURCE_URL}>
+                <S.HamburgerMenuItem href={GITHUB_SOURCE_URL} onClick={() => setHamburgerMenuDisplayed(false)}>
                     Source
                 </S.HamburgerMenuItem>
             </S.HamburgerMenuWrapper>

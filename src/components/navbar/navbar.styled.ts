@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import Link from "next/link";
-import {motion} from "framer-motion";
 
 interface NavItemProps {
     margin?: string,
@@ -13,9 +12,10 @@ export const Navbar = styled.nav`
   backdrop-filter: blur(10px);
   background-color: ${({theme}) => theme.color.navBackground};
   display: flex;
-  padding: 10px 26%;
+  padding: 5px 26%;
   z-index: 10;
   font-family: 'M PLUS Rounded 1c', sans-serif;
+  align-items: center;
 
   a {
     text-decoration: none;
@@ -47,7 +47,7 @@ export const NavList = styled.ul`
 `;
 
 export const NavItem = styled.li<NavItemProps>`
-  font-family: "Segoe UI";
+  font-family: "Segoe UI", serif;
   margin: ${props => props.margin}
 `;
 
@@ -161,4 +161,5 @@ export const HamburgerMenuItem = styled(Link)`
   padding: 10px 50px 10px 10px;
   color: ${({theme}) => theme.color.text};
   z-index: 10;
+  font-family: "Segoe UI", serif;
 `;

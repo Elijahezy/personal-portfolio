@@ -5,5 +5,6 @@ export const Container = styled.section`
   place-items: center;
   color: grey;
   padding: 30px 10px;
+  text-align: center;
 
 `;

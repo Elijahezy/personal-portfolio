@@ -1,7 +1,7 @@
 import Bio from "@/components/bio/bio";
 import Projects from "@/components/projects/projects";
 import Socials from "@/components/socials/socials";
-import Page from "@/components/page/page";
+import Article from "@/components/layout/article/article";
 import Head from "next/head";
 
 export default function Home() {
@@ -17,11 +17,11 @@ export default function Home() {
 
 
             </Head>
-            <Page>
+            <Article title={'Homepage'}>
                 <Bio/>
                 <Projects/>
                 <Socials/>
-            </Page>
+            </Article>
 
         </>
     )
