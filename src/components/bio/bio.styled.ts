@@ -8,6 +8,7 @@ export const InfoWrapper = styled.div`
 
   @media screen and (max-width: 480px) {
     flex-direction: column;
+
   }
 `;
 
@@ -25,9 +26,9 @@ export const ProfilePic = styled.img`
   border: 2px solid ${({theme}) => theme.color.primary};
 
   @media screen and (max-width: 480px) {
-    align-self: center;
-    justify-self: center;
-    margin: 30px;
+    display: grid;
+    place-items: center;
+
   }
 `;
 
@@ -36,8 +37,10 @@ export const ProfileWrapper = styled.div`
   height: 100px;
 
   @media screen and (max-width: 481px) {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
+    margin: 20px 0;
+    align-self: center;
   }
 `;
 

@@ -1,6 +1,6 @@
-import {Canvas, useFrame} from '@react-three/fiber'
+import {Canvas, useFrame, useLoader} from '@react-three/fiber'
 import * as S from './model.styled'
-import React, {useEffect, useRef, useState} from "react";
+import React, {useRef} from "react";
 import * as THREE from 'three';
 import {OrbitControls} from "@react-three/drei";
 
@@ -20,14 +20,12 @@ function Model() {
     const meshRef = useRef(null);
 
     useFrame((state, delta) => {
-        // @ts-ignore
 
         // @ts-ignore
 
         meshRef.current.rotation.y += delta / 3;
 
     });
-
     return (
         <mesh ref={meshRef}>
             <ambientLight intensity={0.5}/>
@@ -40,4 +38,4 @@ function Model() {
     )
 }
 
-export const Memoized3dObject = React.memo(My3dModel)
+export default React.memo(My3dModel)

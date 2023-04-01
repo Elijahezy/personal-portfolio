@@ -5,16 +5,17 @@ import {
     GITHUB_PATH,
     GITHUB_SOURCE_URL,
     HAMBURGER_BARS_PATH,
-    MOON_PATH,
-    SUN_PATH
 } from "@/components/consts";
 import {useBearStore} from "@/store/store";
-import {useState} from "react";
+import React, {useState} from "react";
+import {AnimatePresence, motion} from 'framer-motion'
+import {SunIcon, MoonIcon} from '@chakra-ui/icons'
 
 
 export default function Navbar() {
     const currentThemeBoolean = useBearStore((state) => state.themeBoolean)
     const [isHamburgerMenuDisplayed, setHamburgerMenuDisplayed] = useState(false)
+    // @ts-ignore
     return (
         <S.Navbar>
             <S.Logo href={'/'}>
@@ -45,14 +46,31 @@ export default function Navbar() {
                 </S.NavItem>
 
             </S.NavList>
-            <S.ThemeSwitcher bg={currentThemeBoolean ? '#FBD38D' : 'purple'}
-                             onClick={() => useBearStore.getState().switchTheme(!currentThemeBoolean)}>
-                <Icon viewBox={currentThemeBoolean ? "0 0 512 512" : "0 0 384 512"}
-                      color={currentThemeBoolean ? 'white' : 'white'}>
-                    <path d={currentThemeBoolean ? MOON_PATH : SUN_PATH} fill='currentColor'/>
 
-                </Icon>
-            </S.ThemeSwitcher>
+            <S.ThemeSwitcherWrapper>
+                <AnimatePresence mode={'wait'} initial={false}>
+                    <motion.div
+                        style={{display: 'inline-block', padding: '10px'}}
+                        key={currentThemeBoolean ? 'light' : 'dark'}
+                        initial={{y: -20, opacity: 0}}
+                        animate={{y: 0, opacity: 1}}
+                        exit={{y: 20, opacity: 0}}
+                        transition={{duration: 0.2}}
+                    >
+                        <S.ThemeSwitcher bg={currentThemeBoolean ? '#FBD38D' : 'purple'}
+                                         onClick={() => useBearStore.getState().switchTheme(!currentThemeBoolean)}>
+                            {
+                                currentThemeBoolean ?
+                                    <SunIcon/>
+
+                                    :
+                                    <MoonIcon color={'white'}/>
+
+                            }
+                        </S.ThemeSwitcher>
+                    </motion.div>
+                </AnimatePresence>
+            </S.ThemeSwitcherWrapper>
 
             <S.HamburgerMenu onClick={() => setHamburgerMenuDisplayed(!isHamburgerMenuDisplayed)}>
                 <Icon viewBox="0 0 448 512" color={currentThemeBoolean ? 'white' : 'black'}>

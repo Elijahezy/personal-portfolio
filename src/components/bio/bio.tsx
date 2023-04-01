@@ -3,18 +3,17 @@ import * as H from '../../styles/ui.styled'
 
 export default function Bio() {
     return (
-        <H.Container>
+        <H.Container p={'400px 0 0 0'}>
             <S.InfoWrapper>
                 <S.NameWrapper>
                     <S.Name>
                         Ilia Karavaev
                     </S.Name>
-                    Dev Ninja
+                    React Developer
                 </S.NameWrapper>
                 <S.ProfileWrapper>
                     <S.ProfilePic src={'/Ilia.jpg'}/>
                 </S.ProfileWrapper>
-
             </S.InfoWrapper>
             <H.TitleH3>About me</H.TitleH3>
             <S.Text>

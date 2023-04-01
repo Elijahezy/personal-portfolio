@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Link from "next/link";
+import {motion} from "framer-motion";
 
 interface NavItemProps {
     margin?: string,
@@ -19,6 +20,10 @@ export const Navbar = styled.nav`
   a {
     text-decoration: none;
 
+  }
+
+  @media screen and (max-width: 1200px) {
+    padding: 10px 20%;
   }
 
   @media screen and (max-width: 1024px) {
@@ -68,7 +73,7 @@ export const Logo = styled(Link)`
   }
 
   svg {
-    rotate: -12deg;
+    rotate: -25deg;
     transition: 200ms linear all;
     font-size: 20px;
   }
@@ -93,6 +98,7 @@ export const ThemeSwitcher = styled.button<ThemeSwitcherProps>`
   cursor: pointer;
   border: 0;
   margin: 0 0 0 auto;
+  font-size: 16px;
 
   &:hover {
     filter: brightness(0.9);
@@ -101,6 +107,10 @@ export const ThemeSwitcher = styled.button<ThemeSwitcherProps>`
   &:focus {
     outline: none;
   }
+`;
+
+export const ThemeSwitcherWrapper = styled.div`
+  margin: 0 0 0 auto;
 `;
 
 export const HamburgerMenu = styled.button`

@@ -2,10 +2,13 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   height: 350px;
-  margin: 0 auto 0 auto;
-  position: relative;
+  width: 30%;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
   @media screen and (max-width: 768px) {
-    margin: 0 5% 0 5%;
+    width: 100%;
   }
 
 `;
