@@ -40,18 +40,19 @@ export const Container = styled.article<UniversalProps>`
   padding: ${props => props.p};
   overflow: ${props => props.overflow};
   background-color: transparent;
+
+
   @media screen and (max-width: 1200px) {
-    margin: 0 25%;
-  }
-  @media screen and (max-width: 1024px) {
     margin: 0 20%;
   }
+  @media screen and (max-width: 1024px) {
+    margin: 0 15%;
+  }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     margin: 0 5%;
   }
 `;
-
 
 export const FlexContainer = styled.div<UniversalProps>`
   display: flex;

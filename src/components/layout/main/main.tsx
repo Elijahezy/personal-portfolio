@@ -4,7 +4,6 @@ import CircleSpinner from "@/components/spinner/spinner";
 import * as S from './main.styled'
 import * as H from '@/styles/ui.styled';
 import Navbar from "@/components/navbar/navbar";
-import Footer from "@/components/footer/footer";
 
 interface MainProps {
     children: string | JSX.Element | JSX.Element[],
@@ -30,13 +29,15 @@ const Main = ({children}: MainProps) => {
                 <meta property="og:site_name" content="Ilia Karavaev"/>
                 <meta name="og:title" content="Ilia Karavaev"/>
                 <meta property="og:type" content="website"/>
+                <link rel="icon" href="/favicon.ico"/>
+                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                <link rel="preconnect" href="https://fonts.gstatic.com"/>
                 <title>Ilia Karavaev - Homepage</title>
             </Head>
             <Navbar/>
             <H.Container m={'0'}>
                 <LazyModelSphere/>
                 {children}
-                <Footer/>
             </H.Container>
         </S.Main>
     )

@@ -8,7 +8,8 @@ import {useBearStore} from "@/store/store";
 
 export default function SingleProjectPage() {
     const id = useRouter().query.id;
-    const currentThemeBoolean = useBearStore((state) => state.themeBoolean);
+    const {theme} = useBearStore();
+
     const currentProject = useBearStore((state) => state.projects).find((item) => item.id === id)
 
     return (
@@ -29,7 +30,8 @@ export default function SingleProjectPage() {
                     <S.ProjectsPageLink href={currentProject?.demoLink || '#'} target="_blank">
                         Web
                     </S.ProjectsPageLink>
-                    <Icon viewBox="0 0 512 512" color={currentThemeBoolean ? '#c56cf0' : '#B53471'} fontSize={'12px'}>
+                    <Icon viewBox="0 0 512 512" color={theme ? '#c56cf0' : '#B53471'}
+                          fontSize={'12px'}>
                         <path
                             d={ARROW_UP_RIGHT}
                             fill={'currentColor'}
@@ -43,7 +45,7 @@ export default function SingleProjectPage() {
                     <S.ProjectsPageLink href={currentProject?.sourceLink || '#'} target="_blank">
                         Go to source code
                     </S.ProjectsPageLink>
-                    <Icon viewBox="0 0 512 512" color={currentThemeBoolean ? '#c56cf0' : '#B53471'} fontSize={'12px'}>
+                    <Icon viewBox="0 0 512 512" color={theme ? '#c56cf0' : '#B53471'} fontSize={'12px'}>
                         <path
                             d={ARROW_UP_RIGHT}
                             fill={'currentColor'}

@@ -2,6 +2,7 @@ import Document, {DocumentContext, DocumentInitialProps, Head, Html, Main, NextS
 import {ServerStyleSheet} from 'styled-components';
 import {NextPageContext} from "next";
 import {RenderPage} from "next/dist/shared/lib/utils";
+import {useEffect} from "react";
 
 export default class MyDocument extends Document {
     static async getInitialProps(ctx: NextPageContext & { renderPage: RenderPage; defaultGetInitialProps(ctx: DocumentContext, options?: { nonce?: string }): Promise<DocumentInitialProps> }) {
@@ -29,6 +30,7 @@ export default class MyDocument extends Document {
             sheet.seal()
         }
     }
+
 
     render() {
         return (

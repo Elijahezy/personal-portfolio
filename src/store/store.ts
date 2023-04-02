@@ -12,14 +12,24 @@ type Data = {
 }
 
 interface BearState {
-    themeBoolean: boolean,
-    switchTheme: (bool: boolean) => void,
+    theme: string,
+    switchTheme: (theme: string) => void,
     projects: Data[],
+    loadTheme: () => void,
 }
 
 export const useBearStore = create<BearState>((set) => ({
-    themeBoolean: true,
-    switchTheme: (bool) => set({themeBoolean: bool}),
+    theme: 'dark',
+    switchTheme: (theme: string) => {
+        localStorage.setItem('theme', theme)
+        set({theme: theme})
+    },
+    loadTheme: () => {
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            set({theme: storedTheme});
+        }
+    },
     projects: [
         {
             id: 'wtw',

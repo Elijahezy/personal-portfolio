@@ -14,12 +14,12 @@ import * as S from './socials.styled'
 import {useBearStore} from "@/store/store";
 
 export default function Socials() {
-    const currentThemeBoolean = useBearStore((state) => state.themeBoolean);
+    const {theme} = useBearStore();
     return (
         <H.Container>
             <H.TitleH3 m={'40px 0 20px 0'}>On the web</H.TitleH3>
             <S.SocialLink href={LINKEDIN_URL}>
-                <Icon viewBox="0 0 448 512" color={currentThemeBoolean ? 'white' : 'black'}>
+                <Icon viewBox="0 0 448 512" color={theme === 'dark' ? 'white' : 'black'}>
                     <path
                         fill='currentColor'
                         d={LINKED_PATH}/>
@@ -27,7 +27,7 @@ export default function Socials() {
                 LinkedIn
             </S.SocialLink>
             <S.SocialLink href={GITHUB_URL}>
-                <Icon viewBox="0 0 448 512" color={currentThemeBoolean ? 'white' : 'black'}>
+                <Icon viewBox="0 0 448 512" color={theme === 'dark' ? 'white' : 'black'}>
                     <path
                         fill='currentColor'
                         d={GITHUB_PATH}/>
@@ -35,7 +35,7 @@ export default function Socials() {
                 GitHub
             </S.SocialLink>
             <S.SocialLink href={INSTAGRAM_URL}>
-                <Icon viewBox="0 0 448 512" color={currentThemeBoolean ? 'white' : 'black'}>
+                <Icon viewBox="0 0 448 512" color={theme === 'dark' ? 'white' : 'black'}>
                     <path
                         fill='currentColor'
                         d={INSTAGRAM_PATH}/>
@@ -43,7 +43,7 @@ export default function Socials() {
                 Instagram
             </S.SocialLink>
             <S.SocialLink href={CODEWARS_URL}>
-                <Icon viewBox="0 0 640 512" color={currentThemeBoolean ? 'white' : 'black'}>
+                <Icon viewBox="0 0 640 512" color={theme === 'dark' ? 'white' : 'black'}>
                     <path
                         fill='currentColor'
                         d={CODEWARS_PATH}/>
