@@ -3,7 +3,8 @@ import * as H from '../../styles/ui.styled'
 
 export default function Bio() {
     return (
-        <H.Container p={'400px 0 0 0'}>
+        <H.Container p={'330px 0 0 0'}>
+            <S.About>Hello! I am a web developer based in the USA</S.About>
             <S.InfoWrapper>
                 <S.NameWrapper>
                     <S.Name>

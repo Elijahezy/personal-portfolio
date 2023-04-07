@@ -8,6 +8,8 @@ export const darkTheme = {
         hamburgerBackground: 'rgb(45, 55, 72)',
         pink: '#FBB6CE',
         activeLink: '#c56cf0',
+        aboutText: 'white',
+        aboutBackground: 'rgba(255, 255, 255, 0.08)'
     }
 }
 
@@ -21,5 +23,7 @@ export const lightTheme = {
         hamburgerBackground: 'rgb(255, 255, 255)',
         pink: '#702459',
         activeLink: '#B53471',
+        aboutText: '#1A202C',
+        aboutBackground: 'rgba(255, 255, 255, 0.36)',
     }
 }

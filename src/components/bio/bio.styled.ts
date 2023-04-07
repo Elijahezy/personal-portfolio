@@ -5,6 +5,8 @@ export const InfoWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   padding: 0 0 20px 0;
+  z-index: 2;
+  
 
   @media screen and (max-width: 480px) {
     flex-direction: column;
@@ -46,4 +48,15 @@ export const ProfileWrapper = styled.div`
 
 export const Text = styled.p`
   margin: 20px 0 40px 0;
+`;
+
+export const About = styled.span`
+  display: block;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  padding: 0.75rem;
+  margin-bottom: 30px;
+  color: ${({theme}) => theme.color.aboutText};
+  border-radius: 8px;
+  background-color: ${({theme}) => theme.color.aboutBackground}
 `;
