@@ -18,7 +18,7 @@ export default function Socials() {
     return (
         <H.Container>
             <H.TitleH3 m={'40px 0 20px 0'}>On the web</H.TitleH3>
-            <S.SocialLink href={LINKEDIN_URL}>
+            <S.SocialLink href={LINKEDIN_URL} target="_blank">
                 <Icon viewBox="0 0 448 512" color={theme === 'dark' ? 'white' : 'black'}>
                     <path
                         fill='currentColor'
@@ -26,7 +26,7 @@ export default function Socials() {
                 </Icon>
                 LinkedIn
             </S.SocialLink>
-            <S.SocialLink href={GITHUB_URL}>
+            <S.SocialLink href={GITHUB_URL} target="_blank">
                 <Icon viewBox="0 0 448 512" color={theme === 'dark' ? 'white' : 'black'}>
                     <path
                         fill='currentColor'
@@ -34,7 +34,7 @@ export default function Socials() {
                 </Icon>
                 GitHub
             </S.SocialLink>
-            <S.SocialLink href={INSTAGRAM_URL}>
+            <S.SocialLink href={INSTAGRAM_URL} target="_blank">
                 <Icon viewBox="0 0 448 512" color={theme === 'dark' ? 'white' : 'black'}>
                     <path
                         fill='currentColor'
@@ -42,7 +42,7 @@ export default function Socials() {
                 </Icon>
                 Instagram
             </S.SocialLink>
-            <S.SocialLink href={CODEWARS_URL}>
+            <S.SocialLink href={CODEWARS_URL} target="_blank">
                 <Icon viewBox="0 0 640 512" color={theme === 'dark' ? 'white' : 'black'}>
                     <path
                         fill='currentColor'

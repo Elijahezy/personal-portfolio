@@ -29,7 +29,7 @@ const Main = ({children}: MainProps) => {
                 <meta property="og:site_name" content="Ilia Karavaev"/>
                 <meta name="og:title" content="Ilia Karavaev"/>
                 <meta property="og:type" content="website"/>
-                <link rel="icon" href="/favicon.ico"/>
+                <link rel="icon" href="/earth-americas-solid.svg"/>
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com"/>
                 <title>Ilia Karavaev - Homepage</title>
