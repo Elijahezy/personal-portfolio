@@ -2,12 +2,15 @@ import * as S from './projects.styled'
 import * as H from '../../styles/ui.styled'
 import {Data, useBearStore} from '../../store/store'
 
+interface Props {
+    padding?: string
+}
 
-export default function Projects() {
+export default function Projects({padding}: Props) {
 
     const {projects} = useBearStore();
     return (
-        <H.Container>
+        <H.Container p={padding}>
             <H.TitleH3 m={'0 0 20px 0'}>Projects</H.TitleH3>
             <S.GridContainer>
                 {

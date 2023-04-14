@@ -4,7 +4,7 @@ import Projects from "@/components/projects/projects";
 export default function ProjectsPage() {
     return (
         <Article title={'Projects'}>
-            <Projects m={'400px 0 0 0'}/>
+            <Projects padding={'400px 0 0 0'}/>
         </Article>
     )
 }
