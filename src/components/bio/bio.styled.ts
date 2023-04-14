@@ -6,7 +6,7 @@ export const InfoWrapper = styled.div`
   justify-content: space-between;
   padding: 0 0 20px 0;
   z-index: 2;
-  
+
 
   @media screen and (max-width: 480px) {
     flex-direction: column;
@@ -48,6 +48,10 @@ export const ProfileWrapper = styled.div`
 
 export const Text = styled.p`
   margin: 20px 0 40px 0;
+  text-indent: 1em;
+  line-height: 24px;
+  hyphens: auto;
+  text-align: justify;
 `;
 
 export const About = styled.span`

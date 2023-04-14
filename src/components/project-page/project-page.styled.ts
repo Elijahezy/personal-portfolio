@@ -1,6 +1,20 @@
 import styled from 'styled-components';
 import Link from "next/link";
 
+interface UniversalProps {
+    m?: string,
+    p?: string,
+    flexDirection?: string,
+    gap?: string,
+    justifyContent?: string,
+    alignContent?: string,
+    alignItems?: string,
+    justifyItems?: string,
+    overflow?: string,
+    fontWeight?: string,
+
+}
+
 export const BreadCrumbsContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -41,3 +55,12 @@ export const Picture = styled.img`
   margin: 30px 0 0 0;
 `;
 
+export const Text = styled.p<UniversalProps>`
+  margin: ${props => props.m};
+  padding: ${props => props.p};
+  font-weight: ${props => props.fontWeight};
+  text-indent: 1em;
+  line-height: 24px;
+  hyphens: auto;
+  text-align: justify;
+`;

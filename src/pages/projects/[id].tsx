@@ -20,9 +20,9 @@ export default function SingleProjectPage() {
                     <S.Separator>{`>`}</S.Separator>
                     <S.ProjectName>{currentProject?.name}</S.ProjectName>
                 </S.BreadCrumbsContainer>
-                <H.Text m={'20px 0 0 0'}>
+                <S.Text m={'20px 0 0 0'}>
                     {currentProject?.description}
-                </H.Text>
+                </S.Text>
                 <H.FlexContainer flexDirection={'row'} alignItems={'center'} gap={'10px'} m={'20px 0 5px 0'}>
                     <S.Tag>
                         DEMO

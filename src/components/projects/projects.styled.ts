@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import Link from "next/link";
 
 export const GridContainer = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   width: 100%;
-  gap: 10px;
+  gap: 20px;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -30,6 +31,7 @@ export const Picture = styled.img`
   width: 100%;
   height: 150px;
   transition: 300ms all ease-in-out;
+  object-fit: contain;
 
   &:hover {
     transform: scale(1.1);
