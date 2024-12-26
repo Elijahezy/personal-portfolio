@@ -35,8 +35,8 @@ export const ProfilePic = styled.img`
 `;
 
 export const ProfileWrapper = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
 
   @media screen and (max-width: 481px) {
     width: 100px;

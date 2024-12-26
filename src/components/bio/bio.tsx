@@ -13,7 +13,7 @@ export default function Bio() {
                     Full Stack Developer
                 </S.NameWrapper>
                 <S.ProfileWrapper>
-                    <S.ProfilePic src={'/Ilia.jpg'}/>
+                    <S.ProfilePic src={'/iliav2.png'}/>
                 </S.ProfileWrapper>
             </S.InfoWrapper>
             <H.TitleH3>About me</H.TitleH3>
