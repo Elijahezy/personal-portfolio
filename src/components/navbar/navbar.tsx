@@ -30,6 +30,11 @@ export default function Navbar() {
             </S.Logo>
             <S.NavList>
                 <S.NavItem>
+                    <S.NavLink href={'/experience-page'}>
+                        Work Experience
+                    </S.NavLink>
+                </S.NavItem>
+                <S.NavItem>
                     <S.NavLink href={'/projects'}>
                         Projects
                     </S.NavLink>
@@ -77,6 +82,9 @@ export default function Navbar() {
                 </Icon>
             </S.HamburgerMenu>
             <S.HamburgerMenuWrapper display={isHamburgerMenuDisplayed.toString()}>
+                <S.HamburgerMenuItem href={'/experience-page'} onClick={() => setHamburgerMenuDisplayed(false)}>
+                    Work Experience
+                </S.HamburgerMenuItem>
                 <S.HamburgerMenuItem href={'/projects'} onClick={() => setHamburgerMenuDisplayed(false)}>
                     Projects
                 </S.HamburgerMenuItem>

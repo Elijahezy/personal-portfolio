@@ -15,11 +15,11 @@ export default function SingleProjectPage() {
     return (
         <Article title={currentProject?.name}>
             <H.Container overflow={'hidden'} p={'400px 0 0 0'}>
-                <S.BreadCrumbsContainer>
-                    <S.ProjectsPageLink href={'/projects'}>Projects</S.ProjectsPageLink>
-                    <S.Separator>{`>`}</S.Separator>
-                    <S.ProjectName>{currentProject?.name}</S.ProjectName>
-                </S.BreadCrumbsContainer>
+                <H.BreadCrumbsContainer>
+                    <H.ProjectsPageLink href={'/projects'}>Projects</H.ProjectsPageLink>
+                    <H.Separator>{`>`}</H.Separator>
+                    <H.ProjectName>{currentProject?.name}</H.ProjectName>
+                </H.BreadCrumbsContainer>
                 <S.Text m={'20px 0 0 0'}>
                     {currentProject?.description}
                 </S.Text>

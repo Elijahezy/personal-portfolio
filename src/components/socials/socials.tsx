@@ -34,14 +34,6 @@ export default function Socials() {
                 </Icon>
                 GitHub
             </S.SocialLink>
-            <S.SocialLink href={INSTAGRAM_URL} target="_blank">
-                <Icon viewBox="0 0 448 512" color={theme === 'dark' ? 'white' : 'black'}>
-                    <path
-                        fill='currentColor'
-                        d={INSTAGRAM_PATH}/>
-                </Icon>
-                Instagram
-            </S.SocialLink>
             <S.SocialLink href={CODEWARS_URL} target="_blank">
                 <Icon viewBox="0 0 640 512" color={theme === 'dark' ? 'white' : 'black'}>
                     <path

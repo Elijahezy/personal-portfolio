@@ -1,5 +1,16 @@
 import {create} from 'zustand'
 
+export type ExperienceData = {
+    id: string,
+    company: string,
+    position: string,
+    duration: string,
+    description: string,
+    technologies: string,
+    link: string,
+    projects: string[] | null,
+    fullDescription: string
+}
 
 export type Data = {
     id: string,
@@ -16,6 +27,7 @@ interface BearState {
     theme: string,
     switchTheme: (theme: string) => void,
     projects: Data[],
+    experiences: ExperienceData[],
 }
 
 export const useBearStore = create<BearState>((set) => ({
@@ -55,6 +67,36 @@ export const useBearStore = create<BearState>((set) => ({
             sourceLink: 'https://github.com/Elijahezy/Trip-planner',
             stack: 'Javascript, Chart.js, dayjs, flatpickr'
 
+        }
+    ],
+    experiences: [
+        {
+            id: 'wistar',
+            company: 'The Wistar Institute',
+            position: 'Junior Developer | Full Stack',
+            duration: 'May 2023 - Present',
+            description: 'Responsible for developing and maintaining web applications.',
+            technologies: 'Vue.js/Quasar, TypeScript, PHP/Symfony, Node.js/Express, MSSQL, Azure',
+            link: 'https://www.wistar.org/',
+            fullDescription: 'I worked at The Wistar Institute as part of a small development team, focusing on internal projects designed to support around 300 employees. My responsibilities included not only developing these applications but also thoroughly testing them and incorporating feedback from end users to ensure they met the institute\'s needs effectively.',
+            projects: [
+                'Staff Evaluation: Developed a system to manage the annual employee evaluation process, ensuring that all assessments are carried out efficiently and effectively.',
+                'Device Management: Built a comprehensive system to track and manage all devices within the institute, ensuring up-to-date records and streamlined operations.',
+                'Room Reservation System: Created a system that allows users to book various rooms and spaces, such as classrooms and conference rooms, facilitating better resource management.',
+                'Scientific Order Request Forms: Worked on developing smaller forms for scientific order requests, making the process more accessible and organized.'
+            ],
+
+        },
+        {
+            id: 'ligaa',
+            company: 'Ligaa Agency',
+            position: 'Intern | Front-end',
+            duration: 'Mar 2022 - Mar 2023',
+            description: 'Worked on various frontend projects, creating responsive and user-friendly interfaces.',
+            technologies: 'React, Redux, Styled-Components, JavaScript, TypeScript',
+            link: 'https://ligaa.agency/',
+            fullDescription: '',
+            projects: null,
         }
     ]
 }))

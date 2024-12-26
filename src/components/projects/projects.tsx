@@ -11,7 +11,7 @@ export default function Projects({padding}: Props) {
     const {projects} = useBearStore();
     return (
         <H.Container p={padding}>
-            <H.TitleH3 m={'0 0 20px 0'}>Projects</H.TitleH3>
+            <H.TitleH3 m={'20px 0 10px 0'}>Personal Projects</H.TitleH3>
             <S.GridContainer>
                 {
                     projects.map((project, index) => (
