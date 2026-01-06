@@ -2,7 +2,7 @@ import {useRouter} from "next/router";
 import {useBearStore} from "@/store/store";
 import Article from "@/components/layout/article/article";
 import * as H from '../../styles/ui.styled'
-import {Icon} from "@chakra-ui/icon";
+import {Icon} from "@chakra-ui/react";
 import {ARROW_UP_RIGHT} from "@/components/consts";
 
 export default function SingleExperiencePage() {

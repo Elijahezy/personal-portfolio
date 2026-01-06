@@ -3,7 +3,7 @@ import * as S from '../../components/project-page/project-page.styled';
 import * as H from '../../styles/ui.styled'
 import {useRouter} from "next/router";
 import {ARROW_UP_RIGHT} from "@/components/consts";
-import {Icon} from "@chakra-ui/icon";
+import {Icon} from "@chakra-ui/react";
 import {useBearStore} from "@/store/store";
 
 export default function SingleProjectPage() {

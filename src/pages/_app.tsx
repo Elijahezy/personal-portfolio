@@ -7,7 +7,6 @@ import Layout from '@/components/layout/main/main'
 import {AnimatePresence} from "framer-motion";
 import {useEffect, useState} from "react";
 import CircleSpinner from "@/components/spinner/spinner";
-
 export default function App({Component, pageProps}: AppProps) {
     const {theme, switchTheme} = useBearStore()
     const [loading, setLoading] = useState(true)

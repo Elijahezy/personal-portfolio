@@ -73,9 +73,9 @@ export const useBearStore = create<BearState>((set) => ({
         {
             id: 'wistar',
             company: 'The Wistar Institute',
-            position: 'Junior Developer | Full Stack',
+            position: 'Application Developer',
             duration: 'May 2023 - Present',
-            description: 'Responsible for developing and maintaining web applications.',
+            description: 'Responsible for developing and maintaining internal enterprise web applications.',
             technologies: 'Vue.js/Quasar, TypeScript, PHP/Symfony, Node.js/Express, MSSQL, Azure',
             link: 'https://www.wistar.org/',
             fullDescription: 'I worked at The Wistar Institute as part of a small development team, focusing on internal projects designed to support around 300 employees. My responsibilities included not only developing these applications but also thoroughly testing them and incorporating feedback from end users to ensure they met the institute\'s needs effectively.',
@@ -83,7 +83,9 @@ export const useBearStore = create<BearState>((set) => ({
                 'Staff Evaluation: Developed a system to manage the annual employee evaluation process, ensuring that all assessments are carried out efficiently and effectively.',
                 'Device Management: Built a comprehensive system to track and manage all devices within the institute, ensuring up-to-date records and streamlined operations.',
                 'Room Reservation System: Created a system that allows users to book various rooms and spaces, such as classrooms and conference rooms, facilitating better resource management.',
-                'Scientific Order Request Forms: Worked on developing smaller forms for scientific order requests, making the process more accessible and organized.'
+                'Scientific Order Request Forms: Worked on developing smaller forms for scientific order requests, making the process more accessible and organized.',
+                'People Directory and Onboarding Tools: internal applications supporting employee data management and onboarding workflows',
+                'Annual Compensation Platform: application for managing compensation review cycles and approval processes'
             ],
 
         },

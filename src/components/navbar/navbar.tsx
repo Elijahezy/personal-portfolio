@@ -1,5 +1,5 @@
 import * as S from './navbar.styled'
-import {Icon} from "@chakra-ui/icon";
+import {Icon} from "@chakra-ui/react";
 import {
     EARTH_AMERICA_PATH,
     GITHUB_PATH,

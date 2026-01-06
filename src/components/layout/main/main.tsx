@@ -4,6 +4,7 @@ import CircleSpinner from "@/components/spinner/spinner";
 import * as S from './main.styled'
 import * as H from '@/styles/ui.styled';
 import Navbar from "@/components/navbar/navbar";
+import { useBearStore } from '@/store/store'
 
 interface MainProps {
     children: string | JSX.Element | JSX.Element[],
@@ -15,6 +16,7 @@ const LazyModelSphere = dynamic(() => import('../../model/model'), {
 })
 
 const Main = ({children}: MainProps) => {
+     const { theme } = useBearStore()
     return (
         <S.Main>
             <Head>
@@ -36,7 +38,7 @@ const Main = ({children}: MainProps) => {
             </Head>
             <Navbar/>
             <H.Container m={'0'}>
-                <LazyModelSphere/>
+                <LazyModelSphere />
                 {children}
             </H.Container>
         </S.Main>
