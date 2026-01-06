@@ -5,9 +5,10 @@ import * as S from './main.styled'
 import * as H from '@/styles/ui.styled';
 import Navbar from "@/components/navbar/navbar";
 import { useBearStore } from '@/store/store'
+import { ReactNode } from 'react';
 
 interface MainProps {
-    children: string | JSX.Element | JSX.Element[],
+    children: ReactNode,
 }
 
 const LazyModelSphere = dynamic(() => import('../../model/model'), {

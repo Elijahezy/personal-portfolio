@@ -1,9 +1,10 @@
 import Head from "next/head";
 import {motion} from "framer-motion";
 import Footer from "@/components/footer/footer";
+import { ReactNode } from "react";
 
 interface PageProps {
-    children: string | JSX.Element | JSX.Element[],
+    children: ReactNode,
     title?: string,
 }
 
