@@ -26,7 +26,7 @@ export default function Article({children, title}: PageProps) {
                 initial="hidden"
                 animate="enter"
                 variants={variants}
-                transition={{duration: 0.4, type: 'easeInOut'}}
+                transition={{duration: 0.4, ease: 'easeInOut'}}
             >
                 {children}
                 <Footer/>
