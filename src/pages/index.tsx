@@ -8,7 +8,7 @@ export default function Home() {
         <Article title={'Portfolio'}>
             <Bio/>
             <WorkExperience />
-            <Projects/>
+            {/* <Projects/> */}
             <Socials/>
         </Article>
     )

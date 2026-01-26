@@ -34,11 +34,11 @@ export default function Navbar() {
                         Work Experience
                     </S.NavLink>
                 </S.NavItem>
-                <S.NavItem>
+                {/* <S.NavItem>
                     <S.NavLink href={'/projects'}>
                         Projects
                     </S.NavLink>
-                </S.NavItem>
+                </S.NavItem> */}
                 <S.NavItem>
                     <S.NavLink href={GITHUB_SOURCE_URL} target="_blank">
                         <Icon viewBox="0 0 448 512" color={theme === 'dark' ? 'white' : 'black'}>
@@ -85,9 +85,9 @@ export default function Navbar() {
                 <S.HamburgerMenuItem href={'/experience-page'} onClick={() => setHamburgerMenuDisplayed(false)}>
                     Work Experience
                 </S.HamburgerMenuItem>
-                <S.HamburgerMenuItem href={'/projects'} onClick={() => setHamburgerMenuDisplayed(false)}>
+                {/* <S.HamburgerMenuItem href={'/projects'} onClick={() => setHamburgerMenuDisplayed(false)}>
                     Projects
-                </S.HamburgerMenuItem>
+                </S.HamburgerMenuItem> */}
                 <S.HamburgerMenuItem href={GITHUB_SOURCE_URL} target="_blank"
                                      onClick={() => setHamburgerMenuDisplayed(false)}>
                     Source
