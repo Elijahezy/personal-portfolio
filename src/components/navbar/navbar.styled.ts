@@ -163,3 +163,37 @@ export const HamburgerMenuItem = styled(Link)`
   z-index: 10;
   font-family: "Segoe UI", serif;
 `;
+export const ResumeLink = styled.a`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 5px;
+  border: 1px solid ${({theme}) => theme.color.text};
+  color: ${({theme}) => theme.color.text};
+
+  &:hover {
+    opacity: 0.7;
+  }
+`;
+
+export const ResumeMobileLink = styled.a`
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 0 0 10px;
+  border-radius: 5px;
+  border: 1px solid ${({theme}) => theme.color.text};
+  color: ${({theme}) => theme.color.text};
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @media screen and (max-width: 481px) {
+    display: flex;
+  }
+`;

@@ -4,6 +4,14 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  async rewrites() {
+    return [
+      {
+        source: '/resume',
+        destination: '/Ilia_Karavaev_Resume.pdf',
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

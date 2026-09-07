@@ -2,9 +2,12 @@ import * as S from './navbar.styled'
 import {Icon} from "@chakra-ui/react";
 import {
     EARTH_AMERICA_PATH,
+    FILE_DOWNLOAD_PATH,
     GITHUB_PATH,
     GITHUB_SOURCE_URL,
     HAMBURGER_BARS_PATH,
+    RESUME_FILE_NAME,
+    RESUME_URL,
 } from "@/components/consts";
 import {useBearStore} from "@/store/store";
 import React, {useState} from "react";
@@ -49,6 +52,16 @@ export default function Navbar() {
                         Source
                     </S.NavLink>
                 </S.NavItem>
+                <S.NavItem>
+                    <S.ResumeLink href={RESUME_URL} download={RESUME_FILE_NAME}>
+                        <Icon viewBox="0 0 384 512" color={theme === 'dark' ? 'white' : 'black'}>
+                            <path
+                                fill='currentColor'
+                                d={FILE_DOWNLOAD_PATH}/>
+                        </Icon>
+                        Resume
+                    </S.ResumeLink>
+                </S.NavItem>
 
             </S.NavList>
 
@@ -75,6 +88,15 @@ export default function Navbar() {
                     </motion.div>
                 </AnimatePresence>
             </S.ThemeSwitcherWrapper>
+
+            <S.ResumeMobileLink href={RESUME_URL} download={RESUME_FILE_NAME} title={'Download resume'}
+                                aria-label={'Download resume'}>
+                <Icon viewBox="0 0 384 512" color={theme === 'dark' ? 'white' : 'black'}>
+                    <path
+                        fill='currentColor'
+                        d={FILE_DOWNLOAD_PATH}/>
+                </Icon>
+            </S.ResumeMobileLink>
 
             <S.HamburgerMenu onClick={() => setHamburgerMenuDisplayed(!isHamburgerMenuDisplayed)}>
                 <Icon viewBox="0 0 448 512" color={theme ? 'white' : 'black'}>
