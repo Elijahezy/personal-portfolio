@@ -6,7 +6,6 @@ export type GiftItem = {
   id: string
   title: string
   note?: string
-  price?: string
   url?: string
 }
 

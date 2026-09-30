@@ -61,13 +61,14 @@ export default function Gifts({ token, list, initialReservations }: GiftsProps) 
       <S.Intro>{list.intro}</S.Intro>
       <S.Likes>
         {list.likes.map(like => (
-          <li key={like.label}>
-            <S.LikeLabel>{like.label}.</S.LikeLabel> {like.text}
-          </li>
+          <S.Like key={like.label}>
+            <S.LikeLabel>{like.label}</S.LikeLabel>
+            {like.text}
+          </S.Like>
         ))}
       </S.Likes>
       <S.Hint>
-        Getting something from the list? Mark it below so nobody else buys it too. Leave your name or stay anonymous.
+        Getting something from the list? Mark it below so nobody else buys it too.
       </S.Hint>
       {list.sections.map(section => (
         <S.Section key={section.name}>
@@ -146,7 +147,6 @@ function Item({ token, item, reservation, ownKey, onReservations, onKey }: ItemP
         {item.url
           ? <S.ItemTitle href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</S.ItemTitle>
           : <span>{item.title}</span>}
-        {item.price && <S.Price>{item.price}</S.Price>}
       </S.ItemHeader>
       {item.note && <S.Note>{item.note}</S.Note>}
       {reserved ? (

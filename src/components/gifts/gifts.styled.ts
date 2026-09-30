@@ -82,18 +82,30 @@ export const Intro = styled.p`
 
 export const Likes = styled.ul`
   margin: 0 0 40px;
-  padding: 16px 20px;
+  padding: 4px 20px;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--surface);
 `;
 
-export const LikeLabel = styled.strong`
+export const Like = styled.li`
+  padding: 14px 0;
+  line-height: 1.6;
+
+  & + & {
+    border-top: 1px solid var(--border);
+  }
+`;
+
+export const LikeLabel = styled.span`
+  display: block;
+  margin-bottom: 2px;
+  color: var(--accent);
+  font-size: 13px;
   font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 `;
 
 export const Hint = styled.p`
@@ -148,12 +160,6 @@ export const ItemTitle = styled.a`
   &:hover {
     text-decoration-color: var(--accent);
   }
-`;
-
-export const Price = styled.span`
-  flex-shrink: 0;
-  color: var(--muted);
-  font-size: 15px;
 `;
 
 export const Note = styled.span`
