@@ -1,8 +1,11 @@
 import * as S from './gifts.styled'
-import * as H from '@/styles/ui.styled'
 import { FormEvent, useEffect, useState } from 'react'
+import { Fraunces, Inter } from 'next/font/google'
 import { NAME_MAX_LENGTH } from '@/lib/gifts-shared'
 import type { GiftItem, GiftList, PublicReservations } from '@/lib/gifts-shared'
+
+const display = Fraunces({ subsets: ['latin'], weight: ['600'], variable: '--font-display' })
+const body = Inter({ subsets: ['latin'], variable: '--font-body' })
 
 // Cancel keys for the reservations made from this browser, by item id.
 const KEYS_STORAGE = 'gift-reservation-keys'
@@ -51,40 +54,40 @@ export default function Gifts({ token, list, initialReservations }: GiftsProps) 
   }
 
   return (
-    <S.Wrapper>
-      <div>
-        <S.Title>{list.title}</S.Title>
-        <S.Intro>
-          {list.intro}
-          <S.Likes>
-            {list.likes.map(like => (
-              <li key={like.label}>
-                <S.LikeLabel>{like.label}.</S.LikeLabel> {like.text}
-              </li>
-            ))}
-          </S.Likes>
-        </S.Intro>
-      </div>
-      <H.Text>
+    <S.Page className={`${display.variable} ${body.variable}`}>
+      <S.GiftsGlobalStyle/>
+      <S.Eyebrow>Birthday wishlist</S.Eyebrow>
+      <S.Title>{list.title}</S.Title>
+      <S.Intro>{list.intro}</S.Intro>
+      <S.Likes>
+        {list.likes.map(like => (
+          <li key={like.label}>
+            <S.LikeLabel>{like.label}.</S.LikeLabel> {like.text}
+          </li>
+        ))}
+      </S.Likes>
+      <S.Hint>
         Getting something from the list? Mark it below so nobody else buys it too. Leave your name or stay anonymous.
-      </H.Text>
+      </S.Hint>
       {list.sections.map(section => (
         <S.Section key={section.name}>
-          <H.TitleH3>{section.name}</H.TitleH3>
-          {section.items.map(item => (
-            <Item
-              key={item.id}
-              token={token}
-              item={item}
-              reservation={reservations[item.id]}
-              ownKey={keys[item.id]}
-              onReservations={setReservations}
-              onKey={key => saveKey(item.id, key)}
-            />
-          ))}
+          <S.SectionTitle>{section.name}</S.SectionTitle>
+          <S.Items>
+            {section.items.map(item => (
+              <Item
+                key={item.id}
+                token={token}
+                item={item}
+                reservation={reservations[item.id]}
+                ownKey={keys[item.id]}
+                onReservations={setReservations}
+                onKey={key => saveKey(item.id, key)}
+              />
+            ))}
+          </S.Items>
         </S.Section>
       ))}
-    </S.Wrapper>
+    </S.Page>
   )
 }
 
@@ -138,7 +141,7 @@ function Item({ token, item, reservation, ownKey, onReservations, onKey }: ItemP
   const mine = reserved && Boolean(ownKey)
 
   return (
-    <S.Item $reserved={reserved && !mine}>
+    <S.Item $taken={reserved && !mine}>
       <S.ItemHeader>
         {item.url
           ? <S.ItemTitle href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</S.ItemTitle>
@@ -148,11 +151,11 @@ function Item({ token, item, reservation, ownKey, onReservations, onKey }: ItemP
       {item.note && <S.Note>{item.note}</S.Note>}
       {reserved ? (
         <S.Status>
-          <span>
+          <S.TakenBadge>
             {mine
               ? "You're getting this 🎁"
               : reservation?.name ? `Reserved by ${reservation.name}` : 'Reserved anonymously'}
-          </span>
+          </S.TakenBadge>
           {mine && <S.LinkButton type="button" onClick={onCancel} disabled={busy}>Undo</S.LinkButton>}
         </S.Status>
       ) : (

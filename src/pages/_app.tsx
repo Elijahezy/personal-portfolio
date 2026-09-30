@@ -7,7 +7,12 @@ import Layout from '@/components/layout/main/main'
 import {AnimatePresence} from "framer-motion";
 import {useEffect, useState} from "react";
 import CircleSpinner from "@/components/spinner/spinner";
-export default function App({Component, pageProps}: AppProps) {
+import type {NextPage} from "next";
+
+// Pages that set `standalone` render on their own: no navbar, 3D model, footer or site theme.
+type AppPage = NextPage & { standalone?: boolean }
+
+export default function App({Component, pageProps}: AppProps & { Component: AppPage }) {
     const {theme, switchTheme} = useBearStore()
     const [loading, setLoading] = useState(true)
 
@@ -19,6 +24,9 @@ export default function App({Component, pageProps}: AppProps) {
         setLoading(false)
     }, []);
 
+    if (Component.standalone) {
+        return <Component {...pageProps}/>
+    }
 
     return (
         <>
